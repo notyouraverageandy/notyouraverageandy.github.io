@@ -1,93 +1,81 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Never Forget, You Are Amazing, And You Are Loved</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rising From the Mud</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: #f9f9f9;
+      font-family: 'Montserrat', sans-serif;
+      background-color: #f0f2f5;
       margin: 0;
       padding: 0;
+      text-align: center;
       color: #333;
     }
-    .container {
-      max-width: 900px;
-      margin: 2rem auto;
-      background: white;
-      padding: 2rem;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+    header {
+      background-color: #222;
+      color: white;
+      padding: 60px 20px;
     }
     h1 {
-      text-align: center;
-      color: #e91e63;
-      margin-bottom: 0.5rem;
+      font-size: 2.5rem;
+      margin-bottom: 10px;
     }
-    h2 {
-      color: #333;
-      margin-top: 2rem;
+    section {
+      padding: 40px 20px;
+      max-width: 800px;
+      margin: auto;
     }
-    img {
-      display: block;
-      max-width: 200px;
-      margin: 1rem auto;
-      border-radius: 12px;
+    footer {
+      padding: 20px;
+      background: #eee;
+      color: #666;
+      font-size: 0.9rem;
     }
-    p {
-      line-height: 1.7;
-      margin: 1rem 0;
-    }
-    .donate-buttons {
-      text-align: center;
-      margin: 2rem 0;
-    }
-    .donate-buttons a {
-      display: inline-block;
-      margin: 0.5rem;
-      padding: 0.75rem 1.5rem;
-      background: #4CAF50;
-      color: white;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: bold;
-    }
-    .contact {
-      text-align: center;
+    .counter {
+      margin-top: 20px;
       font-size: 0.95rem;
-      margin-top: 3rem;
+      color: #444;
     }
   </style>
 </head>
 <body>
-  <div class="container">
+
+  <header>
     <h1>Never Forget, You Are Amazing, And You Are Loved</h1>
-    <img src="photo.jpg" alt="Andrew's Photo" />
+    <p>This is my story — honest and real.</p>
+  </header>
 
-    <p>My name is Andrew, and for most of my life, people have said I was just “dealt a bad deck of cards.”</p>
-    <p>My earliest memories aren’t of toys or cartoons — they’re of drugs, violence, and chaos. I was raised in a world of addiction, abuse, and survival. My mother struggled with meth, cocaine, and alcohol. My father battled alcoholism. I saw things no child should ever witness. I lived through years of pain, abandonment, and trauma — but I survived.</p>
+  <section id="chapter-one">
+    <h2>Chapter One: The Mud</h2>
+    <p>
+      I didn’t wake up one day and decide to rebuild my life.<br>
+      Life decided for me.<br><br>
 
-    <p>At 12, I was already lost in the same cycle — using meth, drinking, and searching for something that felt like safety. I dropped out of school. I was taken advantage of. I had a child while I was still a child myself. I spent years trying to escape what I was born into, but I never had a real chance to build something better.</p>
+      I was buried before I bloomed. The mud was thick — not just the mud of poverty, of struggle, of pain, but the kind that clings to your name and won’t wash off. Mistakes, regret, stigma, loneliness... I had them all. And for a long time, I believed that was all I would ever be.<br><br>
 
-    <p>Now, I want to try — really try. And I need your help.</p>
+      There were days when I had nothing. Not even hope. But deep beneath the surface, something stirred — not loudly, not beautifully, but stubbornly. It was a whisper that said, <em>"You are not done yet."</em><br><br>
 
-    <h2>My Mission</h2>
-    <p>My mission is to share my story with others, to help build them up in times of high stress — especially when they've experienced the unthinkable. I want people to know that they can achieve anything they put effort into. If they hold on to faith and love, they can continue on — even in a world that didn’t prepare them to survive.</p>
+      That whisper became a spark. That spark became a plan. That plan is this project. This is the beginning of rising from the mud.
+    </p>
+  </section>
 
-    <p>I believe that love conquers all hardship. That there is still hope in this world. And that there are still good people out there — people like you — who care enough to help.</p>
-
-    <h2>Why I'm Asking for $1</h2>
-    <p>I’m not asking for a handout. I’m asking for one dollar — from anyone willing to help give me a real shot at life. Just one dollar can help me create stability, support my children, care for my mother, and finally move forward. If a million people gave $1, it would change everything.</p>
-
-    <div class="donate-buttons">
-      <a href="https://cash.app/$moneyspot1989" target="_blank">Donate $1 with Cash App</a>
-      <a href="https://coff.ee/notyouraverageandy" target="_blank">Donate $1 with Buy Me A Coffee</a>
+  <footer>
+    <p>You can support me if you want — it helps the page stay alive, and helps me generate new content.</p>
+    <div class="counter">
+      Visitors so far: <span id="visits">...</span>
     </div>
-<h2>Total Donations Received: <span id="donation-count">2</span></h2>
-    <div class="contact">
-      <p>Email me: <a href="mailto:notyouraverageandy@icloud.com">notyouraverageandy@icloud.com</a></p>
-    </div>
-  </div>
+    <script>
+      fetch('https://api.countapi.xyz/hit/risingfromthemud.com/visits')
+        .then(res => res.json())
+        .then(data => {
+          document.getElementById('visits').innerText = data.value;
+        });
+    </script>
+  </footer>
+
 </body>
 </html>
+
